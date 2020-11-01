@@ -1,0 +1,24 @@
+{
+	"manifest_version" : 2,
+	"name" : "华为抢手机",
+	"description" : "华为抢手机",
+	"version" : "0.2",
+	"permissions" : [
+		"tabs",
+        "https://m.vmall.com/*",
+        "https://developer.chrome.com/*"
+	],
+	"web_accessible_resources" : [
+        "jquery.min.js", "code.js"
+	],
+	"content_scripts" : [
+		{
+			"matches": ["<all_urls>"],
+			"js" : [ "jquery.min.js", "code.js"]
+		}
+	],"browser_action" : {
+		"default_icon" : "images/get_started32.png",
+		"default_title" : "京东夺宝岛扛把子",
+		"default_popup" : "popup.html"
+	}
+}
