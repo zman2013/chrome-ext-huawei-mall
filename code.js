@@ -19,7 +19,7 @@ function triggerClick(el) {
 }
 
 setInterval(()=>{
-if (location.pathname == "/product/10086375798519.html") {
+if (location.pathname == "/product/10086009079805.html") {
     console.log('click buy now')
     const btns = document.querySelectorAll('#pro-operation a')
     btns.forEach(el => triggerClick(el))
