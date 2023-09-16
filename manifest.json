@@ -1,22 +1,38 @@
 {
-	"manifest_version" : 2,
-	"name" : "华为抢手机",
-	"description" : "华为抢手机",
-	"version" : "0.3",
-	"host_permissions" : [
-        "https://m.vmall.com/*",
+	"manifest_version": 3,
+	"name": "华为抢手机",
+	"description": "华为抢手机",
+	"version": "0.3",
+	"host_permissions": [
+		"https://m.vmall.com/*",
 		"https://www.vmall.com/*",
-        "https://developer.chrome.com/*"
+		"https://developer.chrome.com/*"
 	],
-	"web_accessible_resources" : ["jquery.min.js","code.js"],
-	"content_scripts" : [
+	"web_accessible_resources": [
 		{
-			"matches": ["<all_urls>"],
-			"js" : [ "jquery.min.js", "code.js"]
+			"resources": [
+				"jquery.min.js",
+				"code.js"
+			],
+			"matches": [
+				"<all_urls>"
+			]
 		}
-	],"action" : {
-		"default_icon" : "images/get_started32.png",
-		"default_title" : "加了个油",
-		"default_popup" : "popup.html"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"jquery.min.js",
+				"code.js"
+			]
+		}
+	],
+	"action": {
+		"default_icon": "images/get_started32.png",
+		"default_title": "果冻",
+		"default_popup": "popup.html"
 	}
 }
